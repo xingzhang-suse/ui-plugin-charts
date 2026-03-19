@@ -140,8 +140,15 @@ jobs:
         if: steps.check_title.outputs.match == 'true' && github.ref_type != 'tag'
         id: create-release-tag
         run: |
+          NOTES_FILE=$(mktemp)
+          jq -r '
+            "## Extensions Catalog\n\n" +
+            (.extensions | to_entries | map(
+              "- Extension **\(.key)** version(s): \(.value.versions | join(", "))"
+            ) | join("\n"))
+          ' manifest.json > "$NOTES_FILE"
           gh release create ${{ steps.sync_catalog_script.outputs.GH_RELEASE_TAG }} \
             --title "Release extensions catalog ${{ steps.sync_catalog_script.outputs.GH_RELEASE_TAG }}" \
-            --notes "Automated release from workflow: \n\n\n\n $(jq . manifest.json | less)"
+            --notes-file "$NOTES_FILE"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

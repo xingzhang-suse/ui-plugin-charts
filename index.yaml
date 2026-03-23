@@ -2200,6 +2200,29 @@ entries:
     urls:
     - assets/observability/observability-0.2.1.tgz
     version: 0.2.1
+  rancher-ai-ui:
+  - annotations:
+      catalog.cattle.io/certified: rancher
+      catalog.cattle.io/display-name: AI Assistant
+      catalog.cattle.io/namespace: cattle-ui-plugin-system
+      catalog.cattle.io/os: linux
+      catalog.cattle.io/permits-os: linux, windows
+      catalog.cattle.io/prime-only: "true"
+      catalog.cattle.io/rancher-version: '>= 2.13.0'
+      catalog.cattle.io/scope: management
+      catalog.cattle.io/ui-component: plugins
+      catalog.cattle.io/ui-extensions-version: '>= 3.0.0 < 4.0.0'
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2026-03-23T09:54:35.685911609Z"
+    description: AI Assistant extension
+    digest: da88414d6d49693808a60714fccb61a13109d42a37706227f975483733d73fd4
+    icon: https://raw.githubusercontent.com/rancher/ui-plugin-charts/main/icons/rancher-ai-ui/1.0.0-extension-icon.svg
+    name: rancher-ai-ui
+    type: application
+    urls:
+    - assets/rancher-ai-ui/rancher-ai-ui-1.0.0.tgz
+    version: 1.0.0
   supportability-review-app:
   - annotations:
       catalog.cattle.io/certified: rancher
@@ -2421,4 +2444,4 @@ entries:
     urls:
     - assets/virtual-clusters/virtual-clusters-1.0.0.tgz
     version: 1.0.0
-generated: "2026-03-09T12:52:56.929568395Z"
+generated: "2026-03-23T09:54:35.685502902Z"

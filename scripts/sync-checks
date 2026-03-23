@@ -119,6 +119,7 @@ do
         echo "     + Fetching icon: ${ICON}"
         ICON_REL=icons/${NAME}/${VERSION}-${ICON_FILE}
         rm -f ${BASE_DIR}/${ICON_REL}
+        mkdir -p ${BASE_DIR}/icons/${NAME}
         
         # Download the icon using curl
         set +e

@@ -26,7 +26,7 @@ jobs:
     permissions: write-all
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Configure Git
         run: |
@@ -34,7 +34,7 @@ jobs:
           git config user.email github-actions@github.com
       
       - name: Setup Helm
-        uses: azure/setup-helm@v3
+        uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3
         with:
           version: v3.12.1
 
@@ -78,7 +78,7 @@ jobs:
           echo "PR_NUMBER=$pr_number" >> $GITHUB_ENV
   
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.5.0
+        uses: helm/chart-releaser-action@be16258da8010256c6e82849661221415f031968 # v1.5.0
         with:
           charts_dir: ./charts/*
         env:
@@ -107,7 +107,7 @@ jobs:
 
       - name: Checkout repository
         if: steps.check_title.outputs.match == 'true' || github.ref_type == 'tag'
-        uses: actions/checkout@v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
 
       - name: Configure Git
         if: steps.check_title.outputs.match == 'true' || github.ref_type == 'tag'
@@ -117,7 +117,7 @@ jobs:
 
       - name: Login to Container Registry
         if: steps.check_title.outputs.match == 'true' || github.ref_type == 'tag'
-        uses: docker/login-action@v2
+        uses: docker/login-action@465a07811f14bebb1938fbed4728c6a1ff8901fc # v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}

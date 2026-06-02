@@ -1,6 +1,6 @@
 # SUSE AI Assistant
 
-**Provides context-aware guidance and automated troubleshooting for complex cluster workloads.**
+**Provides context-aware guidance and automated troubleshooting.**
 
 ### Overview
 The SUSE AI Assistant is your dedicated AI Site Reliability Engineer. Unlike generic chatbots, Liz is built with deep "platform-context," meaning she has real-time access to your cluster state, logs, and events, allowing her to provide tailored advice that generic AI simply cannot.

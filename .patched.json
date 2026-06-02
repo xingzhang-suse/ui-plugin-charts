@@ -1,1 +1,13 @@
-{}
+{
+  "ali@1.1.0": "2026-06-02T14:49:22Z",
+  "elemental@3.0.1": "2026-06-02T14:49:22Z",
+  "harvester@1.8.0": "2026-06-02T14:49:23Z",
+  "kubewarden@4.1.4": "2026-06-02T14:49:24Z",
+  "neuvector-ui-ext@2.1.9": "2026-06-02T14:49:25Z",
+  "observability@2.3.1": "2026-06-02T14:49:25Z",
+  "rancher-ai-ui@1.0.1": "2026-06-02T14:49:26Z",
+  "supportability-review-app@2.0.3": "2026-06-02T14:49:26Z",
+  "supportability-review-app@3.0.3": "2026-06-02T14:49:26Z",
+  "virtual-clusters@1.1.0": "2026-06-02T14:49:26Z",
+  "vulnerability-scanner@0.8.1": "2026-06-02T14:49:27Z"
+}

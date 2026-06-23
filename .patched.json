@@ -9,5 +9,6 @@
   "supportability-review-app@2.0.3": "2026-06-02T14:49:26Z",
   "supportability-review-app@3.0.3": "2026-06-02T14:49:26Z",
   "virtual-clusters@1.1.0": "2026-06-02T14:49:26Z",
-  "vulnerability-scanner@0.8.1": "2026-06-02T14:49:27Z"
+  "vulnerability-scanner@0.8.1": "2026-06-02T14:49:27Z",
+  "kubewarden@4.1.5": "2026-06-23T15:07:51Z"
 }

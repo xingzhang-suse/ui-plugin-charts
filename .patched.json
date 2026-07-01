@@ -11,5 +11,6 @@
   "virtual-clusters@1.1.0": "2026-06-02T14:49:26Z",
   "vulnerability-scanner@0.8.1": "2026-06-02T14:49:27Z",
   "kubewarden@4.1.5": "2026-06-23T15:07:51Z",
-  "observability@2.3.3": "2026-06-30T12:24:56Z"
+  "observability@2.3.3": "2026-06-30T12:24:56Z",
+  "harvester@1.8.1": "2026-07-01T11:06:07Z"
 }

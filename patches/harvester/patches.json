@@ -5,6 +5,12 @@
       "dir": "files",
       "name": "SUSE Virtualization",
       "description": "Centralizes and manages SUSE hyperconverged infrastructure and virtual machine workloads"
+    },
+    {
+      "versions": ">= 1.7.2 < 1.7.999",
+      "dir": "files",
+      "name": "SUSE Virtualization",
+      "description": "Centralizes and manages SUSE hyperconverged infrastructure and virtual machine workloads"
     }
   ]
 }

@@ -202,8 +202,29 @@ do
             continue
           fi
 
-          # Split the VERSION_RANGE string by space into an array of conditions
-          IFS=' ' read -r -a CONDITIONS <<< "$VERSION_RANGE"
+          # Split the VERSION_RANGE string by space into tokens, then merge any
+          # standalone operator token (e.g. ">=") with the following version token
+          # so that ">= 4.1.4" is treated as one condition ">=4.1.4", not two.
+          IFS=' ' read -r -a RAW_TOKENS <<< "$VERSION_RANGE"
+          CONDITIONS=()
+          _i=0
+          while [[ $_i -lt ${#RAW_TOKENS[@]} ]]; do
+            _token="${RAW_TOKENS[$_i]}"
+            if [[ "$_token" =~ ^(>=|<=|>|<|=)$ ]]; then
+              _next=$(( _i + 1 ))
+              if [[ $_next -lt ${#RAW_TOKENS[@]} ]]; then
+                CONDITIONS+=("${_token}${RAW_TOKENS[$_next]}")
+                _i=$(( _i + 2 ))
+              else
+                CONDITIONS+=("$_token")
+                _i=$(( _i + 1 ))
+              fi
+            else
+              CONDITIONS+=("$_token")
+              _i=$(( _i + 1 ))
+            fi
+          done
+          unset _i _token _next
           
           for CONDITION in "${CONDITIONS[@]}"; do
             # 1. Determine operator ($OP) and version ($V2) from the single CONDITION
